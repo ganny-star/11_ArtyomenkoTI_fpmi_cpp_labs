@@ -46,7 +46,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         int same = 0;
         for(int j = 0; j < i; j++) {
-                std::cout << arr[i] << ' ' << arr[j] << std::endl;
+                //std::cout << arr[i] << ' ' << arr[j] << std::endl;
             if(arr[i] == arr[j]) {
                 same = 1;
                 break;
@@ -63,15 +63,17 @@ int main() {
         int j;
         double sum = 0;
         if (arr[i] > 0) {
-
-            for(j = i + 1; arr[j] <= 0; j++) {
+            flag = false
+            for(j = i + 1; arr[j] <= 0 && j < n; j++) {
                 sum += arr[j];
+                if(j == n - 1) flag = true;
             }
+            if(flag) break;
             if(j != i + 1) std::cout << "Sum between first and second positive num is " << sum;
             else std::cout << "No num between first and second positive num";
             break;
         }
-
+        cout << "There are no positive elements";
     }
 
      delete[] arr;

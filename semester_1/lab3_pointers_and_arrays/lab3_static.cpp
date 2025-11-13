@@ -1,4 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <random>
+#include <cmath>
+
+void input_check(){
+    if(!std::cin) {
+        std::cout << "Ploha";
+        exit(1);
+    }
+}
+
 // solve task with usage of
 // static arrays
 int main() {
@@ -8,17 +18,23 @@ int main() {
     int n;
     std::cout << "How many elements?" << std::endl;
     std::cin >> n;
+    input_check();
 
     int arr[n];
 
     int rand;
-    std::cout << "Random or not (1 if yes/0 if no)?" << std::endl;
+    std::cout << "Random or not (1 if yes/no 1 if no)?" << std::endl;
     std::cin >> rand;
+    input_check();
 
     if (rand == 1) {
         int bottom_border, top_border;
         std::cout << "Write bottom and top border: ";
-        std::cin >> bottom_border >> top_border;
+        std::cin >> bottom_border;
+        input_check();
+        std::cin >> top_border;
+        input_check();
+
         std::uniform_int_distribution<int> dist(bottom_border, top_border);
 
         std::cout << "Elements: ";
@@ -37,6 +53,7 @@ int main() {
         for(int i = 0; i < n; i++) {
             int x;
             std::cin >> x;
+            input_check();
             arr[i] = x;
         }
     }
@@ -67,14 +84,16 @@ int main() {
             arr_copy[i] = arr[i];
     }
 
-    for(int i = 0; i < n; i++) {
-            if (i < n / 2 + n % 2) {
-                arr[i] = arr_copy[2*i];
-            }
-            else {
-                arr[i] = arr_copy[(i - n / 2 + n % 2) * 2 + 1];
-            }
-        }
+    int t = 0;
+
+    for (int j = 0; j < n; j += 2) {
+    arr[t] = arr_copy[j];
+    t++;
+}
+    for (int j = 1; j < n; j += 2) {
+    arr[t] = arr_copy[j];
+    t++;
+}
         std::cout << "In first places numbers with even index: ";
         for(int i = 0; i < n; i++) {
             std::cout << arr[i] << ' ';

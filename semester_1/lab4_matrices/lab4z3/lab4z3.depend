@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1763061084 source:c:\users\artem\onedrive\Рабочий стол\lab4z3\main.cpp
+	<iostream>
+	<random>
+	<cmath>
+	<iomanip>
+
