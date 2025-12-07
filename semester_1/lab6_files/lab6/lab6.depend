@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1764014136 source:c:\users\artem\onedrive\Рабочий стол\lab6\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<sstream>
+	<algorithm>
+
