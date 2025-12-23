@@ -1,0 +1,27 @@
+12345
+2
+Tolstoy
+Leo
+Nikolaevich
+Dostoevsky
+Fyodor
+Mikhailovich
+War and Peace
+1869
+67890
+1
+Pushkin
+Alexander
+Sergeyevich
+Eugene Onegin
+1833
+54321
+2
+Bulgakov
+Mikhail
+Afanasyevich
+Gogol
+Nikolai
+Vasilyevich
+The Master and Margarita
+1967
